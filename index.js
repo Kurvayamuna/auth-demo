@@ -5,7 +5,10 @@ const app = express();
 require("dotenv").config();
 
 const cors = require("cors");
-app.use(cors());
+app.use(cors({
+ origin: "https://lustrous-bublanina-ad0d43.netlify.app/"
+}));
+
 
 const connectDB = require("./confiq/db");
 const authRoutes = require("./routes/authRoutes");
